@@ -3,10 +3,11 @@
 name: AWS AMI using Packer Config
 
 on:
-  schedule:
+  push:
     # * is a special character in YAML so you have to quote this string
-    - cron:  '0 4 * * *'
-
+    branches: 
+      - main 
+    
 jobs:
   packer:
     runs-on: ubuntu-latest
